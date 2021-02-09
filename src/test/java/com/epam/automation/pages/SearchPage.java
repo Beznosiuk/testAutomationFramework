@@ -53,12 +53,13 @@ public class SearchPage extends BasePage {
     }
 
     public void addBookToBasket(String bookName) {
-        WebElement element = driver.findElement(By.xpath(String.format(ADD_TO_BASKET, bookName)));
-        element.click();
+        browserService.browserSleep(1000);
+        driver.findElement(By.xpath(String.format(ADD_TO_BASKET, bookName))).click();
         logger.info("Book added to basket");
     }
 
     public void selectBasketPopUp(String basketPopUp) {
+        browserService.browserSleep(1000);
         WebElement popUp = driver.findElement(By.xpath(String.format(BASKET_POP_UP, basketPopUp)));
         browserService.clickJS(popUp);
         logger.info("Basket/Checkout selected");
