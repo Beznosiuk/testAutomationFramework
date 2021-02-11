@@ -29,13 +29,13 @@ Feature: Desktop Checkout for Guest User
     And Basket page is opened
     And Basket order summary is as following:
       | Delivery cost | FREE    |
-      | Total         | 63,48 € |
+      | Total         | 65,17 € |
     And user clicks 'Checkout' button on Basket page
     And Checkout order summary is as following:
-      | Sub-total | 63,48 € |
+      | Sub-total | 65,17 € |
       | Delivery  | FREE    |
       | VAT       | 0,00 €  |
-      | Total     | 63,48 € |
+      | Total     | 65,17 € |
     And user sets email address as 'test@user.com'
     And selects 'Delivery country' as 'Ukraine'
     And user fills delivery address information manually:
